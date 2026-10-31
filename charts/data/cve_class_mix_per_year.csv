@@ -1,0 +1,17 @@
+# source: NVD CVE JSON 2.0 yearly feeds https://nvd.nist.gov/feeds/json/cve/2.0/ (retrieved 2026-10-25)
+# bucketed by 'published' date; Rejected records excluded; 2026 is partial (to 2026-10-24)
+# scores: highest base score across NVD Primary and CNA Secondary metrics for that CVSS version
+# class = coarse grouping of NVD/CNA CWE IDs, see CLASS in scripts/aggregate.py
+year,memory safety,injection / code exec,auth / access control,path traversal / SSRF / file,web client (XSS/CSRF),other / unclassified
+2015,1071,357,795,166,968,3137
+2016,1626,210,1160,108,558,2787
+2017,4090,1092,2396,452,1878,4734
+2018,4309,1408,2268,849,2527,5149
+2019,3910,1695,2254,787,2951,5708
+2020,3464,1867,2473,758,2641,7119
+2021,4475,2309,2460,910,3183,6812
+2022,5530,3520,3354,1165,3925,7579
+2023,5485,4426,4102,1275,6139,7389
+2024,8050,5998,6021,1760,8741,9383
+2025,7670,8598,7240,2137,9559,12947
+2026,15471,11068,20499,5648,8272,25444

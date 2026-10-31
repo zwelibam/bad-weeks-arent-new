@@ -1,0 +1,16 @@
+# source: FIRST EPSS scores model v2026.06.15, score_date 2026-10-24 (retrieved 2026-10-25)
+# https://epss.empiricalsecurity.com/epss_scores-2026-10-24.csv.gz ; joined to NVD published year
+# NOTE: these are today's scores for CVEs of each year, not historical scores
+year,scored,epss_ge_0_1,share_pct
+2015,6494,837,12.89
+2016,6449,738,11.44
+2017,14642,978,6.68
+2018,16510,1274,7.72
+2019,17305,1044,6.03
+2020,18322,902,4.92
+2021,20149,1023,5.08
+2022,25073,955,3.81
+2023,28816,954,3.31
+2024,39953,949,2.38
+2025,48151,730,1.52
+2026,86371,196,0.23

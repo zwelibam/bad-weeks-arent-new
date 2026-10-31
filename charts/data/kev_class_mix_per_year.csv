@@ -1,0 +1,11 @@
+# source: CISA KEV catalog JSON catalogVersion 2026.10.23 dateReleased 2026-10-23T19:30:18.9209Z (retrieved 2026-10-25)
+# https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+# bucketed by dateAdded; KEV began 2021-11-03 with a backfill of older CVEs; 2026 partial (to 2026-10-23)
+# class = coarse grouping of KEV 'cwes' field, see CLASS in scripts/aggregate.py
+year,memory safety,injection / code exec,auth / access control,path traversal / SSRF / file,web client (XSS/CSRF),other / unclassified
+2021,84,64,35,29,4,95
+2022,160,84,51,39,10,211
+2023,49,39,33,6,6,54
+2024,32,50,35,13,6,50
+2025,46,57,35,29,8,70
+2026,40,69,58,28,5,72

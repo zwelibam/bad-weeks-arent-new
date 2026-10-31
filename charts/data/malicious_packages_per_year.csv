@@ -1,0 +1,11 @@
+# source: OSV bulk exports, MAL-* records (OpenSSF malicious-packages) (retrieved 2026-10-25)
+# https://osv-vulnerabilities.storage.googleapis.com/{npm,PyPI}/all.zip
+# bucketed by OSV 'published'; counts reports not incidents (spam/typosquat floods inflate some years)
+# malicious packages normally receive NO CVE, so they are invisible in NVD counts
+year,npm,PyPI
+2021,5,0
+2022,7424,20
+2023,2291,6468
+2024,8372,2646
+2025,191420,1245
+2026,13255,1568

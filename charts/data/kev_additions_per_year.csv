@@ -1,0 +1,10 @@
+# source: CISA KEV catalog JSON catalogVersion 2026.10.23 dateReleased 2026-10-23T19:30:18.9209Z (retrieved 2026-10-25)
+# https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+# bucketed by dateAdded; KEV began 2021-11-03 with a backfill of older CVEs; 2026 partial (to 2026-10-23)
+year,added,ransomware_known,cve_year_eq_added_year
+2021,311,84,120
+2022,555,132,91
+2023,187,43,121
+2024,186,44,116
+2025,245,31,151
+2026,272,27,185
