@@ -1,6 +1,6 @@
 # Vulnerabilities over time: Black October in context
 
-*Prepared 25 October 2026 for a CISO audience (South Africa). Data retrieved 25 October 2026 unless stated. Numbers in square brackets refer to the source list at the end. "(estimate)" marks a vendor estimate or a value we derived. "Unverified" marks a claim we could not confirm at a primary source. Synthesis: an AI-generated first draft from the raw source files, then restructured and fact-checked. Corrections are listed at the end.*
+*Prepared 25 October 2026 for a Technology Leader audience (South Africa). Data retrieved 25 October 2026 unless stated. Numbers in square brackets refer to the source list at the end. "(estimate)" marks a vendor estimate or a value we derived. "Unverified" marks a claim we could not confirm at a primary source. Synthesis: an AI-generated first draft from the raw source files, then restructured and fact-checked. Corrections are listed at the end.*
 
 ## Bottom line
 
