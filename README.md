@@ -10,7 +10,7 @@ The full write-up, with sources, caveats and a fact-check log, is **[OVERVIEW.md
 
 | Chart | File | Data |
 |---|---|---|
-| Comparable bad weeks, 2014 to 2026 (a red bar shows exploitation before disclosure) | [`charts/black_weeks_timeline.svg`](charts/black_weeks_timeline.svg) | [`black_weeks_timeline.csv`](charts/data/black_weeks_timeline.csv) |
+| Comparable bad weeks, 2014 to 2026 (a red bar shows exploitation before disclosure) | [`charts/bad_weeks_timeline.svg`](charts/bad_weeks_timeline.svg) | [`bad_weeks_timeline.csv`](charts/data/bad_weeks_timeline.csv) |
 | Time to exploit, three measures (Mandiant mean days, VulnCheck share exploited by disclosure day, median days from CVE to KEV listing) | [`charts/time_to_exploit.svg`](charts/time_to_exploit.svg) | [`time_to_exploit_reports.csv`](charts/data/time_to_exploit_reports.csv), [`kev_lag_by_pub_year.csv`](charts/data/kev_lag_by_pub_year.csv) |
 | CVEs published per year, 2015 to 24 October 2026 | [`charts/cves_per_year.svg`](charts/cves_per_year.svg) | [`cves_per_year.csv`](charts/data/cves_per_year.csv) |
 | CISA KEV additions per year, 2021 to 23 October 2026 | [`charts/kev_per_year.svg`](charts/kev_per_year.svg) | [`kev_additions_per_year.csv`](charts/data/kev_additions_per_year.csv) |

@@ -1,6 +1,6 @@
 # Data tables — Vulnerabilities over time (compiled 2026-10-25)
 
-## black_weeks_timeline.csv
+## bad_weeks_timeline.csv
 ```
 # Comparable clusters of high-impact vulnerabilities/incidents, compiled 2026-10-25 from the cited sources.
 # disclosure = first public disclosure / vendor advisory; first_exploitation = earliest in-the-wild activity reported by the cited source.

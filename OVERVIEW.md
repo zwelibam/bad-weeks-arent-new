@@ -61,7 +61,7 @@ Exploitation has grown much more slowly than disclosure. KEV added 272 entries t
 
 - The catalogue opened on 3 November 2021 and spent 2021–22 backfilling older CVEs, so those two years are not comparable with later ones. From 2023 the steady state is **about 190–270 additions a year**, rising modestly. The number of **same-year** CVEs listed (121 → 185) is the better trend line: KEV is increasingly about new bugs.
 - "Known ransomware use" is falling (44 → 27), but that field is set when evidence emerges and lags, so recent years will rise (assessment).
-- **KEV is a lagging list.** As of catalogue 2026.10.23, **the PHP2Shell CVEs (CVE-2026-109618/-109619) are not in KEV**, even though AWS saw exploitation on 17 October [D2, B]. Don't wait for KEV during a black week.
+- **KEV is a lagging list.** As of catalogue 2026.10.23, **the PHP2Shell CVEs (CVE-2026-109618/-109619) are not in KEV**, even though AWS saw exploitation on 17 October [D2, B]. Don't wait for KEV during a bad week.
 
 ### 1.4 Time to exploit
 
@@ -82,9 +82,9 @@ Exploitation has grown much more slowly than disclosure. KEV added 272 entries t
 
 ---
 
-## 2. Comparable black weeks and months
+## 2. Comparable bad weeks and months
 
-![Black weeks timeline](charts/black_weeks_timeline.png)
+![Bad weeks timeline](charts/bad_weeks_timeline.png)
 
 | Disclosure | Event | Class | Disclosure → first exploitation | Blast radius |
 |---|---|---|---|---|
@@ -173,7 +173,7 @@ The target has moved from software vendors to maintainers' and CI credentials. *
 | **CA trust failures** have happened before (background only; not verified here). | **CA key failure by trivial key values,** found and distrusted within hours. The mechanism is new; the outcome (distrust, then exit) is familiar [B]. |
 | **The exploited fraction stays small.** KEV adds about 190–270 a year [D2]; GTIG puts 2026 exploitation at about 0.23% of disclosures [S1]. | **A faster exploited stream within a flood:** 18 exploited vulnerabilities a month against 10.5, and High-Risk exploitation more than doubled (28 in 2025 → 75 in Jan–Aug 2026) [S1]. |
 
-**Our judgement:** the cadence of black weeks is cyclical, but in 2026 three things changed: the speed of exploitation, the scale of disclosure, and AI on both sides. "Black October" will probably not be the last such label this year: in 2026 so far, a cluster has arrived every 2–3 months (February, May, September, October) [D3].
+**Our judgement:** the cadence of bad weeks is cyclical, but in 2026 three things changed: the speed of exploitation, the scale of disclosure, and AI on both sides. "Black October" will probably not be the last such label this year: in 2026 so far, a cluster has arrived every 2–3 months (February, May, September, October) [D3].
 
 ---
 
@@ -182,7 +182,7 @@ The target has moved from software vendors to maintainers' and CI credentials. *
 **Patch cadence assumptions**
 - Stop measuring vulnerability management in monthly cycles for internet-facing runtimes and edge devices. Set the SLA in **hours** for any asset that matches a KEV or high-EPSS entry, or that a CERT or vendor reports as "exploited".
 - Do not rely on KEV alone. PHP2Shell was still absent from KEV two days after the fix, despite exploitation [D2].
-- Pair every emergency patch with a **compromise assessment that runs from the first-exploitation date** (17 October for PHP2Shell), not the patch date. Twelve of sixteen measurable black weeks (11 excluding the disputed BeyondTrust case) involved exploitation before disclosure [D3].
+- Pair every emergency patch with a **compromise assessment that runs from the first-exploitation date** (17 October for PHP2Shell), not the patch date. Twelve of sixteen measurable bad weeks (11 excluding the disputed BeyondTrust case) involved exploitation before disclosure [D3].
 - Do not filter only on CVSS ≥ 9. Of 2026 CVEs, 3.7% are unscored and the NVD backlog persists [D1, S6]. Use CNA scores, EPSS and exposure as fallbacks.
 
 **SBOM, dependency pinning, cooldown**
@@ -222,7 +222,7 @@ The target has moved from software vendors to maintainers' and CI credentials. *
 **Data (computed from bulk files; scripts in `scripts/aggregate.py`, CSVs in `charts/data/`)**
 - [D1] NVD CVE JSON 2.0 yearly feeds 2002–2026, https://nvd.nist.gov/feeds/json/cve/2.0/, retrieved 2026-10-25 (2026 feed last modified 2026-10-25 07:15 UTC).
 - [D2] CISA KEV JSON, catalogVersion 2026.10.23, https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json, retrieved 2026-10-25.
-- [D3] `charts/data/black_weeks_timeline.csv`, compiled 2026-10-25 from the R-sources below.
+- [D3] `charts/data/bad_weeks_timeline.csv`, compiled 2026-10-25 from the R-sources below.
 - [D4] OSV bulk exports (OpenSSF malicious-packages, MAL-*), https://osv-vulnerabilities.storage.googleapis.com/{npm,PyPI}/all.zip, retrieved 2026-10-25.
 - [D5] FIRST EPSS scores, model v2026.06.15, score date 2026-10-24, https://epss.empiricalsecurity.com/, retrieved 2026-10-25.
 

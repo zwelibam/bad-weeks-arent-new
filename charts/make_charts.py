@@ -2,7 +2,7 @@
 (TUFTE_RC, range-frame axes, direct labels, no legends, no pies, no dual y-axes).
 
 Data: charts/data/*.csv (each file carries a '#' source/date header; built by scripts/aggregate.py
-except time_to_exploit_reports.csv and black_weeks_timeline.csv, which are hand-compiled and sourced).
+except time_to_exploit_reports.csv and bad_weeks_timeline.csv, which are hand-compiled and sourced).
 Run from the project root:  python3 charts/make_charts.py   -> charts/*.png + charts/*.svg
 """
 import csv
@@ -258,7 +258,7 @@ def time_to_exploit():
     save(fig, "time_to_exploit")
 
 
-# 5 — Black-weeks timeline strip ---------------------------------------------------------
+# 5 — Bad-weeks timeline strip ---------------------------------------------------------
 CLASS_COLOR = {"supply chain": C["cat"][1], "memory safety": C["cat"][0], "identity": C["cat"][3],
                "AI-assisted": C["cat"][2]}
 
@@ -281,8 +281,8 @@ def to_year(d):
     return dd.year + (dd.timetuple().tm_yday - 1) / 365.25
 
 
-def black_weeks_timeline():
-    rows = read("black_weeks_timeline.csv")
+def bad_weeks_timeline():
+    rows = read("bad_weeks_timeline.csv")
     fig, ax = plt.subplots(figsize=(10, 9))
     n = len(rows)
     for i, r in enumerate(rows):
@@ -312,13 +312,13 @@ def black_weeks_timeline():
     ax.set_xticks(range(2014, 2027))
     ax.set_xticklabels([str(y) if y % 2 == 0 else "" for y in range(2014, 2027)])
     ax.spines["bottom"].set_bounds(2014, 2026.82)
-    ax.set_title("Black weeks, 2014–2026: dot = public disclosure,\nred bar = exploitation before disclosure",
+    ax.set_title("Bad weeks, 2014–2026: dot = public disclosure,\nred bar = exploitation before disclosure",
                  loc="left", fontsize=16)
     ax.text(2026.95, n - 0.1, "lag    class", fontsize=9.5, color=C["text3"], va="bottom")
-    source_note(fig, "Source: charts/data/black_weeks_timeline.csv (compiled 2026-10-25 from CISA, Mandiant/GTIG, Volexity, "
+    source_note(fig, "Source: charts/data/bad_weeks_timeline.csv (compiled 2026-10-25 from CISA, Mandiant/GTIG, Volexity, "
                      "Cloudflare, SolarWinds SEC 8-K, Orca, Anthropic and others; see 'sources' column). Lag = first reported "
                      "exploitation minus disclosure; month-level for SolarWinds and GTG-1002.")
-    save(fig, "black_weeks_timeline")
+    save(fig, "bad_weeks_timeline")
 
 
 # 6 — Malicious packages (OSV MAL-*) — small multiples, shared log y ---------------------
@@ -389,7 +389,7 @@ if __name__ == "__main__":
     kev_per_year()
     critical_share()
     time_to_exploit()
-    black_weeks_timeline()
+    bad_weeks_timeline()
     malicious_packages()
     class_mix()
     print("charts written to", HERE)
